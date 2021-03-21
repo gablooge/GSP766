@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: cpu-mem-quota
+  namespace: team-a
+spec:
+  hard:
+    limits.cpu: "4"
+    limits.memory: "12Gi"
+    requests.cpu: "2"
+    requests.memory: "8Gi"
