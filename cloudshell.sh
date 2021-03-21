@@ -45,7 +45,6 @@ gcloud iam service-accounts keys create key.json --iam-account team-a-dev@${GOOG
 # Task 3
 gcloud auth activate-service-account  --key-file=key.json
 gcloud container clusters get-credentials multi-tenant-cluster --zone us-central1-a --project ${GOOGLE_CLOUD_PROJECT}
-gcloud container clusters get-credentials multi-tenant-cluster --zone us-central1-a --project ${GOOGLE_CLOUD_PROJECT}
 
 kubectl create quota test-quota \
 --hard=count/pods=2,count/services.loadbalancers=1 --namespace=team-a
